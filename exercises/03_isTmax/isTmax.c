@@ -8,7 +8,18 @@
  *   Rating: 1
  */
 int isTmax(int x) {
-#error TODO: Return 1 only when x is the maximum 32-bit two's-complement integer
+
+// #error TODO: Return 1 only when x is the maximum 32-bit two's-complement integer
+  
+  // if ((x+1)==(~x) && x!=-1)
+  //   return 1;
+  // else
+  //   return 0;
+
+
+  return !( ~(x + 1) ^ x ) & !!(x + 1);
+
+
 }
 
 int main(void) {

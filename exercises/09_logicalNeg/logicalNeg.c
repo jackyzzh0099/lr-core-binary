@@ -9,7 +9,9 @@
  *   Rating: 4
  */
 int logicalNeg(int x) {
-#error TODO: Implement logical negation without using the ! operator.
+// #error TODO: Implement logical negation without using the ! operator.
+  return ((x | 1) & (~x & 1)) & (~((x & (1 << 31)) >> 31));
+  
 }
 
 int main(void) {
